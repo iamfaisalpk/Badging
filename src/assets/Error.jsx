@@ -67,4 +67,3 @@ return (
 
 export default Stopwatch;
 
-
