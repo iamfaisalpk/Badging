@@ -1,6 +1,4 @@
-import Stopwatch from "./assets/Error"
-import TodoInput from "./assets/Todo"
-import TodoList from "./assets/Todolist"
+import Count from "./assets/Count"
 
 
 
@@ -13,7 +11,8 @@ const App = () => {
       <TodoInput/>
       <TodoList /> */}
       {/* </div> */}
-      <Stopwatch/>
+      {/* <Stopwatch/> */}
+      <Count/>
     </>
   )
 }
