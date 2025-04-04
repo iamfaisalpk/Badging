@@ -1,3 +1,4 @@
+import Button from "./assets/Button"
 import Count from "./assets/Count"
 import Reusable from "./assets/Reusable"
 
@@ -25,6 +26,9 @@ const App = () => {
         label="confirm password"
         placeholder="Re-type password"/>
       </div> */}
+
+      <Button label="click Me" onClick={()=> alert("Button Clicked")}/>
+      <Button label="Delete" onClick={()=> alert("delet the content")} className="bg-red-500 ml-2"/>
     </>
   )
 }
