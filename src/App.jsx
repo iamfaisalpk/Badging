@@ -1,4 +1,5 @@
 import Count from "./assets/Count"
+import Reusable from "./assets/Reusable"
 
 
 
@@ -12,7 +13,18 @@ const App = () => {
       <TodoList /> */}
       {/* </div> */}
       {/* <Stopwatch/> */}
-      <Count/>
+      {/* <Count/> */}
+      {/* <div>
+        <h2>Reusable</h2>
+        <Reusable
+        label="enter a password"
+        placeholder="type here.."
+        />
+
+        <Reusable
+        label="confirm password"
+        placeholder="Re-type password"/>
+      </div> */}
     </>
   )
 }
