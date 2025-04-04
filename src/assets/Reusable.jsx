@@ -12,7 +12,6 @@ const Reusable = ({label,placeholder}) => {
 return (
     <div>
         <label>{label}</label>
-        
         {/* input + button */}
         <div>
             <input type={show ? "text" : "password"}
