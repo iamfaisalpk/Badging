@@ -6,7 +6,6 @@ const Login = () => {
     const [password ,setPassword] =  useState('')
 
 
-    
     const handleLogin = (e)=>{
         e.prev()
         axios.get(`http://localhost:4040/user?email=${email}&password=${password}`)
