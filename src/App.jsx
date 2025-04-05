@@ -1,23 +1,19 @@
-import Button from "./assets/Button"
-import Count from "./assets/Count"
-import Reusable from "./assets/Reusable"
-import TodoInput from "./assets/Todo"
-import TodoList from "./assets/Todolist"
-
+import FetchUser from "./assets/FetchUser"
 
 
 const App = () => {
   return (
     <>
       {/* <Error/> */}
-      <div className="p-4 max-w-md mx-auto">
+      {/* <div className="p-4 max-w-md mx-auto">
       <h1 className="text-xl font-bold mb-4">Todo List</h1>
       <TodoInput/>
       <TodoList /> 
-      </div>
+      </div> */}
       {/* <Stopwatch/> */}
-      {/* <Count/> */}
-      <div>
+      {/* <ProductDisplay/>
+      <ProductSelector/> */}
+      {/* <div>
         <h2>Reusable</h2>
         <Reusable
         label="enter a password"
@@ -27,10 +23,13 @@ const App = () => {
         <Reusable
         label="confirm password"
         placeholder="Re-type password"/>
-      </div>
-
+      </div> */}
+{/* 
       <Button label="click Me" onClick={()=> alert("Button Clicked")}/>
-        <Button label="Delete" onClick={()=> alert("delet the content")} className="bg-red-500 ml-2"/>
+        <Button label="Delete" onClick={()=> alert("delet the content")} className="bg-red-500 ml-2"/> */}
+        {/* <Signup/>
+        <Login/> */}
+        {/* <FetchUser/> */}
     </>
   )
 }
