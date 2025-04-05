@@ -21,12 +21,12 @@ const handleRegister = async (e) => {
     setError(null);
 
     try {
-      const response = await axios.post('http://localhost:4040/user', formData); // Make sure db.json has "users": []
-    console.log("✅ POST SUCCESS", response.data);
+    const response = await axios.post('http://localhost:4040/user', formData); 
+    console.log("POST SUCCESS", response.data);
     alert('Registration successful!');
     setFormData({ name: '', email: '', password: '' });
     } catch (err) {
-    console.log('❌ Error:', err);
+    console.log('Error:', err);
     setError('Registration failed. Please try again.');
     } finally {
     setLoading(false);

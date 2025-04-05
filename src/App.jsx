@@ -29,7 +29,8 @@ const App = () => {
         <Button label="Delete" onClick={()=> alert("delet the content")} className="bg-red-500 ml-2"/> */}
         {/* <Signup/>
         <Login/> */}
-        {/* <FetchUser/> */}
+        <FetchUser/>
+        {/* <orderFood/> */}
     </>
   )
 }
