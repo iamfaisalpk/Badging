@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const Signup = () => {
-const [formData, setFormData] = useState({
+const [data, setData] = useState({
     name: '',
     email: '',
     password: ''
@@ -12,7 +12,7 @@ const [error, setError] = useState(null);
 
 const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setData({ ...data, [name]: value });
 };
 
 const handleRegister = async (e) => {
@@ -21,10 +21,10 @@ const handleRegister = async (e) => {
     setError(null);
 
     try {
-    const response = await axios.post('http://localhost:4040/user', formData); 
+    const response = await axios.post('http://localhost:4040/user', data); 
     console.log("POST SUCCESS", response.data);
     alert('Registration successful!');
-    setFormData({ name: '', email: '', password: '' });
+    semData({ name: '', email: '', password: '' });
     } catch (err) {
     console.log('Error:', err);
     setError('Registration failed. Please try again.');
@@ -44,7 +44,7 @@ return (
         type="text"
         name="name"
         placeholder="Name"
-        value={formData.name}
+        value={data.name}
         onChange={handleChange}
         required
         /><br />
@@ -53,7 +53,7 @@ return (
         type="email"
         name="email"
         placeholder="Email"
-        value={formData.email}
+        value={data.email}
         onChange={handleChange}
         required
         /><br />
@@ -62,7 +62,7 @@ return (
         type="password"
         name="password"
         placeholder="Password"
-        value={formData.password}
+        value={data.password}
         onChange={handleChange}
         required
         /><br />
