@@ -1,12 +1,13 @@
-import Login from "./assets/Userss/Login"
-import Signup from "./assets/Userss/Signup"
+import Stopwatch from "./assets/Userss/Login"
+
 
 
 const App = () => {
   return (
     <>
-      <Signup/>
-      <Login/>
+      {/* <Signup/>
+      <Login/> */}
+      <Stopwatch/>
     </>
   )
 }
