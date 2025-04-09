@@ -38,61 +38,49 @@
 
 // export default Login
 
-import React, {  useEffect, useMemo, useReducer,  } from 'react'
 
-const initialState = {time : 0,  running :false}
+// import React, { useEffect, useReducer } from 'react'
 
-    const reducer = (state,action)=>{
-        switch (action.type) {
-            case "Start" :
-                return {...state, running : true}
-            case "Pause" :
-                return {...state, running : false}
-            case "Reset" :
-                return {time: 0, running : false}
-            case "TICK" :
-                return state.running ? {...state, time: state.time + 1} : state;
-            default :
-            return state;
-        }
-    }
+// const initialState = { time : 0 , running : false}
 
-const Stopwatch = () => {
-    const [state,dispatch] = useReducer(reducer,initialState)
+// const reducer = (state,action)=> {
+//     switch(action.type){
+//         case "Start" :
+//             return {...state , running : true}
+//         case "Pause" :
+//             return {...state , running : false}
+//         case "Reset" :
+//             return {time : 0, running : false}
+//         case "Touch" :
+//             return state.running ? {...state, time : state.time + 1}: state;
+//         default :
+//             return state;
+//     }
+// }
 
-    useEffect(()=>{
-        if(!state.running) return;
-        const timer  = setInterval(()=> dispatch({type : "TICK"}), 1000);
-        return () => clearInterval(timer);
-    }, [state.running])
+// const Stopwatch = () => {
+//     const [state,dispatch] = useReducer(reducer,initialState);
 
-    const formatTime = useMemo (()=>{
-        return new Date(state.time * 1000).toISOString().substr(11,8);
-    }, [state.time])
+//     useEffect (()=>{
+//         if(!state.running) return;
+//         const timer = setInterval(()=> dispatch ({type : "Touch"}), 1000);
+//         return ()=> clearInterval(timer)
+//     },[state.running])
 
-    // const handleChange = useCallback(()=>{
-    //     highlight.current.focus()
-    // },[])
+//     const formateTime = new Date (state.time * 1000).toISOString().substr(11,8);
 
+// return (
+//     <div>
+//     <h2>{formateTime}</h2>
+//     <button onClick={()=> dispatch({type : "Start"})}>
+//         {state.time && !state.running ? "Resume" : "Start"}
+//     </button>
+//     <button onClick={()=> dispatch({type : "Pause"})}>Pause</button>
+//     <button onClick={()=> dispatch({type : "Reset"})}>Reset</button>
+//     </div>
+// )
+// }
 
-return (
-    <div>
-    <h2>{formatTime}</h2>
+// export default Stopwatch
 
-    <button onClick={()=> dispatch ({type : "Start"})}>
-        {state.time > 0 && !state.running ? "Resume" : "Start"}
-        </button>
-
-        <button onClick={()=> dispatch({type : "Pause"})}>
-            Pause
-        </button>
-
-        <button onClick={()=> dispatch({type : "Reset"})}>
-            Reset
-        </button>
-    </div>
-)
-}
-
-export default Stopwatch;
 
